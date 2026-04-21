@@ -1,4 +1,5 @@
 import java.util.Random;
+import java.util.Scanner;
 
 public class TicTacToe {
 
@@ -25,7 +26,7 @@ public class TicTacToe {
     // ================= UC2: Toss to Decide First Player and Symbol =================
     static void toss() {
         Random rand = new Random();
-        int toss = rand.nextInt(2); // 0 or 1
+        int toss = rand.nextInt(2);
 
         String player1 = "Player 1";
         String player2 = "Player 2";
@@ -51,13 +52,27 @@ public class TicTacToe {
         System.out.println(player2 + " = " + player2Symbol);
     }
 
+    // ================= UC3: Accept User Slot Input (1–9) =================
+    static int getUserInput() {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("\nEnter a slot number (1-9): ");
+        int slot = sc.nextInt();
+
+        return slot;
+    }
+
     public static void main(String[] args) {
 
-        // UC1 Execution
+        // UC1
         initializeBoard();
         displayBoard();
 
-        // UC2 Execution
+        // UC2
         toss();
+
+        // UC3
+        int userSlot = getUserInput();
+        System.out.println("You selected slot: " + userSlot);
     }
 }
