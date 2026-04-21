@@ -1,9 +1,8 @@
 public class TicTacToe {
 
-    // Step 1: Create 2D array (board)
     static char[][] board = new char[3][3];
 
-    // Step 2: Initialize board
+    // ================= UC1 =================
     static void initializeBoard() {
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
@@ -12,7 +11,6 @@ public class TicTacToe {
         }
     }
 
-    // Step 3: Display board
     static void displayBoard() {
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
@@ -22,9 +20,8 @@ public class TicTacToe {
         }
     }
 
-    // Step 4: Main method
     public static void main(String[] args) {
-        initializeBoard();   // fill board
-        displayBoard();      // print board
+        initializeBoard();
+        displayBoard();
     }
 }
